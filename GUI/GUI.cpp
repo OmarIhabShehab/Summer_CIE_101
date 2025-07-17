@@ -146,9 +146,7 @@ void GUI::CreateDrawToolBar()
 	string MenuIconImages[DRAW_ICON_COUNT];
 	MenuIconImages[ICON_RECT] = "images\\MenuIcons\\Menu_Rect.jpg";
 	MenuIconImages[ICON_TRI] = "images\\MenuIcons\\Menu_Tri.jpg";
-	MenuIconImages[ICON_EXIT] = "images\\MenuIcons\\Menu_Exit.jpg";
-
-	//TODO: Prepare images for each menu icon and add it to the list
+	MenuIconImages[ICON_EXIT] = "images\\MenuIcons\\Menu_Exit.jpg";	//TODO: Prepare images for each menu icon and add it to the list
 
 	//Draw menu icon one image at a time
 	for (int i = 0; i < DRAW_ICON_COUNT; i++)

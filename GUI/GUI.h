@@ -33,7 +33,7 @@ class GUI
 		//If you want to change the menu icons order, change the order here
 		ICON_RECT,		//Recangle icon in menu
 		ICON_TRI,		//Triangle icon in menu
-
+		/*ICON_Polygon,*/
 		//TODO: Add more icons names here
 
 		ICON_EXIT,		//Exit icon
