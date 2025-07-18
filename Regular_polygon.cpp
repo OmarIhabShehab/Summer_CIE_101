@@ -14,7 +14,7 @@ Regular_polygon::Regular_polygon(Point C ,Point P, int x,GfxInfo shapeGfxInfo) :
 	for (int i = 0; i < x; i++) {
 		double angle = 2 * 3.14159 * i / sides;
 		xPoints[i] = Center.x + (radius * cos(angle));
-		yPoints[i] = Center.y + (radius * sin(angle));
+		yPoints[i] = Center.y +(radius * sin(angle));
 	}
 
 }

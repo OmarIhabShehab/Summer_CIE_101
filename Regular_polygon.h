@@ -14,6 +14,7 @@ private:
 	GfxInfo shapeGfx;
 
 public:
-	Regular_polygon(Point centerx, Point y, int x, GfxInfo shapeGfxInfo);
+	Regular_polygon(Point C , Point P, int x, GfxInfo shapeGfxInfo);
+
 };
 

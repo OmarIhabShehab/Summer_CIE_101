@@ -27,6 +27,18 @@ struct GfxInfo	//Graphical info common for all shapes (you may add more members)
 
 class GUI
 {
+
+public:
+	color DrawColor;		//Drawing color
+	color FillColor;		//Filling color
+private:
+	enum GUI_MODE	//Graphical user interface mode
+	{
+		MODE_DRAW,	//Drawing mode (startup mode)
+		MODE_PLAY	//Playing mode
+	};
+
+
 	enum MenuIcon //The icons of the menu (you should add more icons)
 	{
 		//Note: Icons are ordered here as they appear in menu
@@ -45,16 +57,27 @@ class GUI
 
 
 
+	GUI_MODE InterfaceMode;
+
 	int	width, height,	//Window width and height
 		wx, wy,			//Window starting coordinates
 		StatusBarHeight,	//Status Bar Height
 		ToolBarHeight,		//Tool Bar Height (distance from top of window to bottom line of toolbar)
+		StatusBarWidth,
 		MenuIconWidth;		//Width of each icon in toolbar menu
-
+	string message;
+	bool Isfilled;
 
 	color DrawColor;		//Drawing color
 	color FillColor;		//Filling color
-	color HighlightColor;	//Highlighting color
+	color HighlightColor;
+	color StatusBarColor;	//Status bar color
+	color StatusBarWhitePa;//colors of color palette displayed in the status bar
+	color StatusBarRedPa;
+	color StatusBarBluePa;
+	color StatusBarBlackPa;
+	color StatusBarYellowPa;
+	color StatusBarGreenPa;	//Highlighting color
 	color MsgColor;			//Messages color
 	color BkGrndColor;		//Background color
 	color StatusBarColor;	//Status bar color
@@ -80,11 +103,22 @@ public:
 	void CreateDrawToolBar();	//creates Draw mode toolbar & menu
 	void CreateStatusBar() const;	//create the status bar
 
+
+	color CreateColorPalette();
+	void CreateStatusBarWhitePa() const; //color displayed on status bar
+	void CreateStatusBarRedPa() const;	//color displayed on status bar
+	void CreateStatusBarBluePa() const;	//color displayed on status bar
+	void CreateStatusBarBlackPa() const;	//color displayed on status bar
+	void CreateStatusBarYellowPa() const;	//color displayed on status bar
+	void CreateStatusBarGreenPa() const;	//color displayed on status bar
+
+
 	void ClearStatusBar() const;	//Clears the status bar
 	void ClearDrawArea() const;	//Clears the drawing area
 
 	// -- shapes Drawing functions
 	void DrawRect(Point P1, Point P2, GfxInfo RectGfxInfo) const;  //Draw a rectangle
+
 	///Make similar functions for drawing all other shapes.
 
 	void PrintMessage(string msg) const;	//Print a message on Status bar

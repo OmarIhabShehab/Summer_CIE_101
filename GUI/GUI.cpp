@@ -126,6 +126,48 @@ void GUI::CreateStatusBar() const
 	pWind->DrawRectangle(0, height - StatusBarHeight, width, height);
 }
 //////////////////////////////////////////////////////////////////////////////////////////
+color GUI::CreateColorPalette()
+{
+	color COL;
+	int x, y;
+	pWind->WaitMouseClick(x, y);
+	if ((y > height - StatusBarHeight) && (y < height))
+	{
+		if ((x > StatusBarWidth) && (x < StatusBarWidth + 45))
+		{
+			COL = WHITE;
+		}
+		else if ((x > StatusBarWidth + 45) && (x < StatusBarWidth + 90))
+		{
+			COL = RED;
+		}
+		else if ((x > StatusBarWidth + 90) && (x < StatusBarWidth + 135))
+		{
+			COL = BLUE;
+		}
+		else if ((x > StatusBarWidth + 135) && (x < StatusBarWidth + 180))
+		{
+			COL = BLACK;
+		}
+		else if ((x > StatusBarWidth + 180) && (x < StatusBarWidth + 225))
+		{
+			COL = YELLOW;
+		}
+		else if ((x > StatusBarWidth + 225) && (x < width))
+		{
+			COL = GREEN;
+		}
+	}
+	return COL;
+}
+void GUI::CreateStatusBarWhitePa() const
+{
+	pWind->SetPen(BLACK, 1);
+	pWind->SetBrush(StatusBarWhitePa);
+	pWind->DrawRectangle(StatusBarWidth, height - StatusBarHeight, StatusBarWidth + 45, height);
+	pWind->DrawLine(0, StatusBarHeight, width, StatusBarHeight);
+}
+
 void GUI::ClearStatusBar() const
 {
 	//Clear Status bar by drawing a filled white rectangle
