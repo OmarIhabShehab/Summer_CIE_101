@@ -126,7 +126,9 @@
     <ClCompile Include="Regular_polygon.cpp">
       <Filter>Shapes&amp;Graph</Filter>
     </ClCompile>
-    <ClCompile Include="Circle.cpp" />
+    <ClCompile Include="Circle.cpp">
+      <Filter>Shapes&amp;Graph</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="controller.h" />
@@ -213,7 +215,9 @@
     <ClInclude Include="Regular_polygon.h">
       <Filter>Shapes&amp;Graph</Filter>
     </ClInclude>
-    <ClInclude Include="Circle.h" />
+    <ClInclude Include="Circle.h">
+      <Filter>Shapes&amp;Graph</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Operations">
