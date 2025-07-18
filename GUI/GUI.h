@@ -68,8 +68,8 @@ private:
 	string message;
 	bool Isfilled;
 
-	color DrawColor;		//Drawing color
-	color FillColor;		//Filling color
+	
+	
 	color HighlightColor;
 	color StatusBarColor;	//Status bar color
 	color StatusBarWhitePa;//colors of color palette displayed in the status bar
@@ -80,7 +80,7 @@ private:
 	color StatusBarGreenPa;	//Highlighting color
 	color MsgColor;			//Messages color
 	color BkGrndColor;		//Background color
-	color StatusBarColor;	//Status bar color
+	
 	int PenWidth;			//width of the pen that draws shapes
 
 	/// Add more members if needed
